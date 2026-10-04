@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DriveNap 客服支援、常見問題與問題回報方式。">
+  <title>客服支援｜DriveNap</title>
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/app-icon.png" alt=""><span>DriveNap</span></a><nav class="nav-links" aria-label="主要導覽"><a href="index.html">首頁</a><a href="support.html" aria-current="page">客服支援</a><a href="privacy.html">隱私權</a></nav></div></header>
+  <main>
+    <section class="page-hero"><div class="wrap"><div class="eyebrow">SUPPORT</div><h1>客服支援</h1><p>先查看常見問題；若仍無法解決，可在 DriveNap 的「裝置診斷」頁儲存匿名支援報告後聯絡作者。</p></div></section>
+    <section class="legal"><div class="wrap"><article>
+      <h2>常見問題</h2>
+      <div class="faq">
+        <details><summary>為什麼清單中看見同一顆磁碟多次？</summary><p>同一顆實體磁碟可能包含多個可掛載卷宗，例如 DevSSD 與 NO NAME。DriveNap 會去除同一卷宗的重複偵測，但不同卷宗仍會分別列出，避免選錯或誤卸載。</p></details>
+        <details><summary>為什麼找不到外接 SSD 或 HDD？</summary><p>請確認磁碟已出現在 Finder 或「磁碟工具程式」，再按「重新掃描外接磁碟」。Direct Edition 可直接偵測；沙盒版首次使用需要選擇一次磁碟根目錄並授權。</p></details>
+        <details><summary>安全卸載失敗怎麼辦？</summary><p>請先儲存工作並關閉正在使用外接磁碟檔案的 App，再按「再試一次安全卸載」。DriveNap 不會自動結束其他 App，也不會使用 force unmount。</p></details>
+        <details><summary>Mac 喚醒後為什麼沒有自動掛載？</summary><p>請確認「Mac 喚醒後自動掛載」已開啟。只有同一次 Sleep 前確實由 DriveNap 成功卸載時，喚醒後才會自動掛載；手動卸載不會觸發。</p></details>
+        <details><summary>顯示 Deep Idle 是否代表外接盒已斷電？</summary><p>不是。Power State 是 macOS 公布的儲存層狀態。只有經過實機驗證的裝置才會顯示已知名稱；它不證明 USB 已斷電，也不是 DriveNap 發送電源命令造成。</p></details>
+        <details><summary>DriveNap 可以讓所有外接磁碟省下多少電？</summary><p>無法提供固定百分比。省電幅度取決於外接盒、Bridge、SSD／HDD、連線方式與 macOS。建議使用「省電成效」的 A/B 統計比較同一台 Mac 與同一顆磁碟。</p></details>
+        <details><summary>支援哪些外接盒或晶片？</summary><p>核心掛載、卸載與 Guardian 不依賴特定 Bridge。Power State 名稱只有已驗證硬體才會套用；未知裝置仍能使用主要管理功能。</p></details>
+      </div>
+
+      <h2>回報問題前</h2>
+      <ol>
+        <li>記下 DriveNap 版本與 macOS 版本。</li>
+        <li>說明外接盒、SSD／HDD 型號及連線方式。</li>
+        <li>在「裝置診斷」產生匿名支援報告。</li>
+        <li>描述發生步驟，以及問題屬於掛載、卸載、Sleep／Wake 或 Guardian。</li>
+      </ol>
+      <p class="note">匿名支援報告不包含 Volume UUID、使用者名稱、檔案路徑、開啟中的檔名或完整事件歷史。寄出前仍請自行檢查內容。</p>
+
+      <div class="contact-card">
+        <h2>聯絡客服</h2>
+        <p>作者：Mason Hung<br>Email：<a href="mailto:taijia1025@gmail.com?subject=DriveNap%20問題回報">taijia1025@gmail.com</a></p>
+        <p>請附上匿名支援報告、問題截圖與重現步驟。請勿寄送磁碟內的私人檔案、Volume UUID、序號或其他敏感資料。</p>
+      </div>
+    </article></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-row"><span>© 2026 Mason Hung</span><nav><a href="index.html">首頁</a><a href="privacy.html">隱私權政策</a></nav></div></footer>
+</body>
+</html>

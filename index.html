@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DriveNap 是為 MacBook 外接 SSD 與 HDD 設計的安全卸載與省電管理工具。">
+  <title>DriveNap｜Mac 外接磁碟 Energy Guardian</title>
+  <link rel="icon" type="image/png" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html"><img src="assets/app-icon.png" alt=""><span>DriveNap</span></a>
+      <nav class="nav-links" aria-label="主要導覽">
+        <a href="index.html" aria-current="page">首頁</a>
+        <a href="support.html">客服支援</a>
+        <a href="privacy.html">隱私權</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">MACBOOK 外接儲存裝置適用</div>
+          <h1>不用時安全休息，需要時快速回來。</h1>
+          <p class="lead">DriveNap 為 macOS 外接 SSD 與 HDD 提供睡眠前安全卸載、喚醒後條件式掛載與 Battery Guardian，減少不必要的背景存取，同時把資料安全放在省電之前。</p>
+          <div class="actions">
+            <a class="button primary" href="#how">了解運作方式</a>
+            <a class="button secondary" href="support.html">取得客服支援</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="DriveNap App 圖示">
+          <img src="assets/app-icon.png" alt="DriveNap 藍色外接磁碟圖示">
+        </div>
+      </div>
+    </section>
+
+    <section class="section white" id="features">
+      <div class="wrap">
+        <div class="section-head"><h2>為外接磁碟設計的安全省電流程</h2><p>不依賴特定橋接晶片。只要 macOS 能正常管理該外接卷宗，核心安全卸載功能就能運作。</p></div>
+        <div class="features">
+          <article class="card"><div class="icon">Zz</div><h3>Sleep Fast Path</h3><p>Mac 進入睡眠前，以原生 Disk Arbitration 安全卸載指定磁碟，完成後才放行睡眠。</p></article>
+          <article class="card"><div class="icon">↻</div><h3>條件式自動掛載</h3><p>只有前一次確實由 Sleep 自動卸載成功，喚醒後才允許恢復掛載，避免誤操作。</p></article>
+          <article class="card"><div class="icon">BG</div><h3>Battery Guardian</h3><p>使用電池且磁碟長時間閒置時，先檢查 I/O，再倒數執行安全卸載。</p></article>
+          <article class="card"><div class="icon">I/O</div><h3>忙碌保護</h3><p>檔案仍被 App 使用時取消卸載並提示可能的占用程式，不強制中斷資料存取。</p></article>
+          <article class="card"><div class="icon">SSD</div><h3>通用外接儲存</h3><p>支援使用者指定的外接 SSD 或 HDD，並使用穩定卷宗身分保存個別設定。</p></article>
+          <article class="card"><div class="icon">LE</div><h3>低耗電監測</h3><p>優先採事件驅動；背景與未掛載狀態降低監測頻率，Mac 睡眠時停止一般輪詢。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product" id="how">
+      <div class="wrap product-grid">
+        <div class="section-head"><div class="eyebrow">DRIVENAP 2.8</div><h2>先確認安全，再執行省電。</h2><p>DriveNap 不會直接切斷 USB 供電，也不會發送 vendor-specific 或 NVMe 電源指令。它的工作是安全停止檔案系統 I/O，卸載指定卷宗，再交由 macOS、外接盒與磁碟執行原生電源管理。</p></div>
+        <div class="flow-card" aria-label="DriveNap 省電流程">
+          <div class="flow-step"><span>1</span><div><strong>偵測事件</strong><small>Sleep、鎖屏、電池與閒置狀態</small></div></div>
+          <div class="flow-line"></div>
+          <div class="flow-step"><span>2</span><div><strong>確認 I/O 安全</strong><small>忙碌就取消，不使用 force unmount</small></div></div>
+          <div class="flow-line"></div>
+          <div class="flow-step"><span>3</span><div><strong>安全卸載</strong><small>使用 macOS 原生 Disk Arbitration</small></div></div>
+          <div class="flow-line"></div>
+          <div class="flow-step"><span>4</span><div><strong>需要時恢復</strong><small>依使用者設定與成功旗標重新掛載</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="steps">
+      <div class="wrap">
+        <div class="section-head"><h2>第一次使用，只要四個步驟</h2><p>DriveNap 只操作你明確選擇的外接卷宗。</p></div>
+        <div class="steps">
+          <article class="step"><div><h3>選擇外接 SSD 或 HDD</h3><p>從「設定」選擇要管理的外接磁碟根目錄並保存授權。</p></div></article>
+          <article class="step"><div><h3>選擇省電模式</h3><p>可使用智慧省電、最大省電，或自行調整 Guardian、鎖屏與 Sleep 選項。</p></div></article>
+          <article class="step"><div><h3>確認手動掛載與卸載</h3><p>先完成一次安全卸載與重新掛載，確認目前硬體組合能正常使用。</p></div></article>
+          <article class="step"><div><h3>進行一次 Sleep／Wake 測試</h3><p>從事件紀錄確認 Sleep 卸載成功，以及喚醒後是否依設定恢復掛載。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section white">
+      <div class="wrap trust">
+        <article class="card"><div class="status">隱私優先</div><h2>磁碟資料不會上傳</h2><p>DriveNap 不需要帳號，不讀取或上傳檔案內容。設定、事件紀錄及睡眠統計保存在你的 Mac。</p></article>
+        <article class="card"><div class="eyebrow">重要說明</div><h2>省電幅度依硬體而異</h2><p>安全卸載不等於 USB 斷電。實際效果會受到 Mac、外接盒、Bridge、SSD／HDD 與 macOS 電源管理影響。</p><div class="actions"><a class="button secondary" href="support.html">查看相容性與常見問題</a></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-row"><span>© 2026 Mason Hung</span><nav><a href="support.html">客服支援</a><a href="privacy.html">隱私權政策</a></nav></div></footer>
+</body>
+</html>
