@@ -46,6 +46,20 @@ h1 { max-width: 780px; margin: 10px 0 20px; font-size: clamp(2.5rem, 6vw, 4.9rem
 .card .icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 16px; border-radius: 14px; color: var(--blue-dark); background: var(--soft); font-size: 1.05rem; font-weight: 800; }
 .card h3 { margin: 0 0 8px; font-size: 1.15rem; }
 .card p { margin: 0; color: var(--muted); }
+.screenshots { background: #edf4fb; }
+.screenshot-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(280px, .45fr); gap: 22px; align-items: stretch; }
+.screenshot-card { overflow: hidden; margin: 0; border: 1px solid #d4e0ec; border-radius: 24px; background: var(--surface); box-shadow: 0 16px 42px rgba(30, 70, 110, .11); }
+.screenshot-card a { display: grid; overflow: hidden; background: #e9edf2; }
+.screenshot-card img { display: block; width: 100%; height: auto; transition: transform .22s ease; }
+.screenshot-card a:hover img { transform: scale(1.012); }
+.screenshot-wide { grid-column: 1; }
+.screenshot-menu { grid-column: 2; grid-row: 1 / span 3; display: flex; flex-direction: column; }
+.screenshot-menu a { flex: 1; place-items: start center; padding: 20px; }
+.screenshot-menu img { width: min(100%, 560px); height: auto; max-height: 900px; object-fit: contain; }
+.screenshot-card figcaption { display: grid; gap: 4px; padding: 18px 20px 20px; }
+.screenshot-card figcaption strong { font-size: 1.05rem; }
+.screenshot-card figcaption span, .screenshot-note { color: var(--muted); }
+.screenshot-note { margin: 18px 0 0; text-align: center; font-size: .92rem; }
 .product { background: linear-gradient(180deg, #eef7ff 0%, #f6f9fc 100%); }
 .product-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 54px; align-items: center; }
 .flow-card { padding: 28px; border: 1px solid #c9d9e9; border-radius: 26px; background: var(--surface); box-shadow: 0 22px 60px rgba(28, 78, 128, .14); }
@@ -89,12 +103,17 @@ details p { margin: 10px 0 0; color: var(--muted); }
   .nav { min-height: 64px; }
   .brand span { display: none; }
   .nav-links { gap: 14px; font-size: .93rem; }
+  .nav-links a[href="#screenshots"] { display: none; }
   .hero { padding: 56px 0 44px; }
   .hero-grid, .product-grid { grid-template-columns: 1fr; gap: 22px; }
   .hero-art { min-height: 285px; order: -1; }
   .hero-art::before { width: 260px; height: 260px; }
   .hero-art img { width: 170px; height: 170px; border-radius: 38px; }
   .features, .trust { grid-template-columns: 1fr; }
+  .screenshot-grid { grid-template-columns: 1fr; }
+  .screenshot-wide, .screenshot-menu { grid-column: 1; grid-row: auto; }
+  .screenshot-menu a { padding: 16px; }
+  .screenshot-menu img { width: min(100%, 440px); max-height: none; }
   .section { padding: 52px 0; }
   .footer-row { align-items: flex-start; flex-direction: column; }
   .footer-row nav { margin-left: 0; flex-wrap: wrap; }
