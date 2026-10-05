@@ -106,14 +106,20 @@ details p { margin: 10px 0 0; color: var(--muted); }
   .nav-links a[href="#screenshots"] { display: none; }
   .hero { padding: 56px 0 44px; }
   .hero-grid, .product-grid { grid-template-columns: 1fr; gap: 22px; }
-  .hero-art { min-height: 285px; order: -1; }
-  .hero-art::before { width: 260px; height: 260px; }
-  .hero-art img { width: 170px; height: 170px; border-radius: 38px; }
+  .hero-art { min-height: 220px; order: -1; }
+  .hero-art::before { width: 205px; height: 205px; }
+  .hero-art img { width: 132px; height: 132px; border-radius: 30px; }
   .features, .trust { grid-template-columns: 1fr; }
   .screenshot-grid { grid-template-columns: 1fr; }
   .screenshot-wide, .screenshot-menu { grid-column: 1; grid-row: auto; }
+  .screenshot-wide a { display: block; aspect-ratio: 4 / 3; overflow: hidden; }
+  .screenshot-wide img { width: 180%; max-width: none; margin-left: -40%; }
+  .screenshot-card a:hover img { transform: none; }
   .screenshot-menu a { padding: 16px; }
   .screenshot-menu img { width: min(100%, 440px); max-height: none; }
+  .screenshot-card figcaption { padding: 16px 18px 18px; }
+  .screenshot-card figcaption strong { font-size: 1.08rem; }
+  .screenshot-card figcaption span { font-size: .96rem; line-height: 1.55; }
   .section { padding: 52px 0; }
   .footer-row { align-items: flex-start; flex-direction: column; }
   .footer-row nav { margin-left: 0; flex-wrap: wrap; }
